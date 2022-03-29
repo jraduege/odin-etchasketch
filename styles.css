@@ -1,0 +1,17 @@
+#container {
+    height: 960px;
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.dot {
+    display: flex;
+    flex: 1;
+}
