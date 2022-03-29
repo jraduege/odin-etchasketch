@@ -1,5 +1,14 @@
 const container = document.querySelector("#container");
-let resolution=16;
+let resolution=getResolution();
+
+function getResolution() {
+    let input=Number(window.prompt("How may boxes per row?",""));
+    if (input <= 100) { 
+        return input;
+    } else {
+        return 100;
+    }  
+}
 
 for (let i=1; i<= resolution; i++) {
     let currentRow = document.createElement("div");
@@ -7,7 +16,6 @@ for (let i=1; i<= resolution; i++) {
     for (let j=1; j<=resolution; j++) {
         let currentDot= document.createElement("div");
         currentDot.classList.add("dot");
-        currentDot.textContent = `${j},${i}`;
         currentRow.appendChild(currentDot);
     }
     container.appendChild(currentRow);
