@@ -20,3 +20,10 @@ function handleHover(e) {
     dot = e.target;
     dot.classList.add("active");
 }
+
+const reset=document.querySelector("#reset");
+reset.addEventListener("click",handleReset);
+
+function handleReset() {
+    dots.forEach((dot) => dot.classList.remove("active"));
+}
